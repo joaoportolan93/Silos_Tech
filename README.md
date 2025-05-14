@@ -44,4 +44,4 @@ Basta abrir o arquivo `index.html` em qualquer navegador moderno para visualizar
 
 ---
 
-Desenvolvido como atividade prática para demonstração de habilidades em desenvolvimento frontend. 
+Desenvolvido como atividade prática para demonstração de habilidades em desenvolvimento frontend.

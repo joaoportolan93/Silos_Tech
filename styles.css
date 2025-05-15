@@ -28,7 +28,7 @@ h1, h2, h3, h4 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
-    color: #0f4c75;
+    color: #294256;
 }
 
 section {
@@ -40,6 +40,7 @@ section h2 {
     font-size: 2.5rem;
     margin-bottom: 50px;
     position: relative;
+    color: #294256;
 }
 
 section h2:after {
@@ -47,7 +48,7 @@ section h2:after {
     display: block;
     width: 80px;
     height: 4px;
-    background-color: #0f4c75;
+    background-color: #f39c12;
     position: absolute;
     bottom: -15px;
     left: 50%;
@@ -60,7 +61,7 @@ p {
 
 .btn {
     display: inline-block;
-    background-color: #0f4c75;
+    background-color: #f39c12;
     color: #fff;
     padding: 12px 30px;
     border-radius: 4px;
@@ -73,7 +74,7 @@ p {
 }
 
 .btn:hover {
-    background-color: #1a6ea8;
+    background-color: #e67e22;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -85,7 +86,7 @@ ul {
 
 /* Cabeçalho */
 header {
-    background-color: #fff;
+    background-color: #1e3346;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -104,7 +105,7 @@ header .container {
 .logo h1 {
     font-size: 28px;
     margin: 0;
-    color: #0f4c75;
+    color: #ffffff;
 }
 
 /* Menu de navegação normal (desktop) */
@@ -121,7 +122,7 @@ header .container {
 
 .nav-menu ul li a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-weight: 500;
     transition: all 0.3s ease;
     padding: 10px 0;
@@ -130,7 +131,7 @@ header .container {
 }
 
 .nav-menu ul li a:hover {
-    color: #0f4c75;
+    color: #f39c12;
 }
 
 /* Efeito de sublinhado nos botões apenas para desktop */
@@ -139,13 +140,13 @@ header .container {
     header {
         padding: 0;
         height: 80px;
-        background-color: rgba(255, 255, 255, 0.98);
+        background-color: #1e3346;
         transition: box-shadow 0.3s ease, background-color 0.3s ease;
     }
     
     header.scrolled {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        background-color: rgba(255, 255, 255, 1);
+        background-color: #1e3346;
     }
     
     header .container {
@@ -194,7 +195,7 @@ header .container {
         position: absolute;
         width: 0;
         height: 2px;
-        background-color: #0f4c75;
+        background-color: #f39c12;
         bottom: 5px;
         left: 0;
         transition: width 0.3s ease;
@@ -206,31 +207,11 @@ header .container {
     
     /* Item ativo no menu */
     .nav-menu ul li a.active {
-        color: #0f4c75;
+        color: #f39c12;
     }
     
     .nav-menu ul li a.active:after {
         width: 100%;
-    }
-    
-    /* Botão de contato destacado */
-    .nav-menu ul li:last-child a {
-        background-color: #0f4c75;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 4px;
-        box-shadow: 0 2px 5px rgba(15, 76, 117, 0.3);
-        transition: all 0.3s ease;
-    }
-    
-    .nav-menu ul li:last-child a:hover {
-        background-color: #1a6ea8;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(15, 76, 117, 0.4);
-    }
-    
-    .nav-menu ul li:last-child a:after {
-        display: none;
     }
 }
 
@@ -249,59 +230,50 @@ header .container {
 
 .hamburger span {
     display: block;
-    position: absolute;
-    height: 3px;
     width: 100%;
-    background: #0f4c75;
-    border-radius: 3px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    transition: all 0.3s ease;
 }
 
 .hamburger span:nth-child(1) {
-    top: 0px;
+    top: 0;
 }
 
 .hamburger span:nth-child(2) {
-    top: 8px;
+    top: 9px;
 }
 
 .hamburger span:nth-child(3) {
-    top: 16px;
+    top: 18px;
 }
 
-/* Estilo para o menu toggle ativo (X) */
 .menu-toggle.active .hamburger span:nth-child(1) {
-    top: 8px;
-    transform: rotate(135deg);
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
 .menu-toggle.active .hamburger span:nth-child(2) {
     opacity: 0;
-    left: -60px;
 }
 
 .menu-toggle.active .hamburger span:nth-child(3) {
-    top: 8px;
-    transform: rotate(-135deg);
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('img/hero_banner.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/hero_banner.jpeg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
+    background-attachment: fixed;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
     position: relative;
-    margin-top: 80px;
 }
 
 .hero:before {
@@ -311,14 +283,15 @@ header .container {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 10;
+    z-index: 2;
     max-width: 800px;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 .hero-content h2 {
@@ -332,7 +305,7 @@ header .container {
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 30px;
 }
 
@@ -343,8 +316,8 @@ header .container {
 
 .sobre-content {
     display: flex;
+    gap: 40px;
     align-items: center;
-    gap: 50px;
 }
 
 .sobre-texto {
@@ -378,13 +351,14 @@ header .container {
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
 .produto:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .produto img {
@@ -399,7 +373,8 @@ header .container {
 }
 
 .produto p {
-    padding: 0 20px 20px;
+    padding: 0 20px 30px;
+    color: #555;
 }
 
 /* Diferenciais */
@@ -408,31 +383,33 @@ header .container {
 }
 
 .diferenciais-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .diferencial {
-    text-align: center;
-    padding: 30px;
-    border-radius: 8px;
-    background-color: #f8f8f8;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    padding: 20px 30px;
+    background-color: #f1f1f1;
+    border-left: 5px solid #f39c12;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .diferencial:hover {
     transform: translateY(-5px);
-}
-
-.diferencial-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .diferencial h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: #294256;
+    margin-bottom: 5px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.diferencial p {
+    margin-bottom: 0;
 }
 
 /* Compromisso Ambiental */
@@ -442,15 +419,15 @@ header .container {
 
 .compromisso-content {
     display: flex;
+    gap: 40px;
     align-items: center;
-    gap: 50px;
 }
 
 .compromisso-imagem {
     flex: 1;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .compromisso-texto {
@@ -468,62 +445,29 @@ header .container {
 
 .depoimentos-slider {
     display: flex;
-    gap: 30px;
-    overflow-x: auto;
-    padding: 20px 0;
-    scrollbar-width: none;  /* Firefox */
-}
-
-.depoimentos-slider::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari */
+    flex-direction: column;
+    gap: 20px;
 }
 
 .depoimento {
-    flex: 0 0 calc(33.333% - 20px);
-    min-width: 300px;
-}
-
-.depoimento-conteudo {
-    background-color: #f8f8f8;
+    background-color: #f1f1f1;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #296380;
     position: relative;
 }
 
-.depoimento-conteudo:before {
-    content: '"';
-    font-size: 5rem;
-    position: absolute;
-    top: -20px;
-    left: 20px;
-    color: #0f4c75;
-    opacity: 0.2;
+.depoimento p {
+    font-style: italic;
+    margin-bottom: 10px;
 }
 
-.depoimento-autor {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.depoimento-autor img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 15px;
-}
-
-.depoimento-autor h4 {
-    margin: 0;
-    font-size: 1.1rem;
-}
-
-.depoimento-autor p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #666;
+.depoimento p.autor {
+    text-align: right;
+    font-style: normal;
+    font-weight: 600;
+    color: #296380;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 /* Representantes */
@@ -533,7 +477,7 @@ header .container {
 
 .representantes-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
@@ -545,150 +489,82 @@ header .container {
 }
 
 .regiao h3 {
+    font-size: 1.4rem;
+    color: #f39c12;
     margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #0f4c75;
 }
 
-.representante {
-    display: flex;
-    align-items: center;
+.regiao p {
+    margin-bottom: 10px;
+    color: #555;
 }
 
-.representante img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
-}
-
-.representante-info {
-    flex: 1;
-}
-
-.representante h4 {
-    margin-bottom: 5px;
-}
-
-.representante p {
-    margin: 3px 0;
-    font-size: 0.9rem;
-}
-
-/* Contato e Localização */
+/* Contato */
 .contato {
     background-color: #fff;
 }
 
 .contato-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 50px;
 }
 
 .formulario {
-    flex: 1;
+    background-color: #f8f8f8;
+    padding: 40px;
+    border-radius: 10px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    font-weight: 500;
+    font-weight: 600;
+    color: #294256;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 12px;
+    padding: 12px 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-family: inherit;
     font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group textarea {
     resize: vertical;
+    min-height: 150px;
 }
 
 .localizacao {
-    flex: 1;
+    padding: 40px;
 }
 
-.mapa {
-    margin-top: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.mapa img {
-    display: block;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-/* Rodapé */
+/* Footer */
 footer {
-    background-color: #0f4c75;
+    background-color: #1e3346;
     color: #fff;
-    padding: 60px 0 20px;
+    padding: 50px 0 20px;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
+    text-align: center;
 }
 
 .footer-logo h2 {
+    font-size: 2rem;
     color: #fff;
     margin-bottom: 10px;
 }
 
-.footer-links h3,
-.footer-contact h3 {
-    color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links ul li {
-    margin-bottom: 10px;
-}
-
-.footer-links ul li a {
-    color: #ddd;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links ul li a:hover {
-    color: #fff;
-}
-
-.footer-contact p {
-    margin-bottom: 10px;
-    color: #ddd;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Responsividade */
+/* Media Queries */
 @media (max-width: 1199px) {
-    /* Tablets */
     section {
         padding: 60px 0;
     }
@@ -702,15 +578,16 @@ footer {
     }
     
     .sobre-content,
-    .compromisso-content,
-    .contato-container {
+    .compromisso-content {
         flex-direction: column;
+        gap: 30px;
     }
     
+    .sobre-texto,
+    .compromisso-texto,
     .sobre-imagem,
     .compromisso-imagem {
-        order: -1;
-        margin-bottom: 30px;
+        width: 100%;
     }
     
     .diferenciais-grid,
@@ -723,85 +600,77 @@ footer {
     }
     
     .footer-content {
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 30px;
     }
     
     .footer-logo,
     .footer-links,
     .footer-contact {
-        flex: 0 0 calc(50% - 15px);
+        width: 100%;
+        text-align: center;
     }
 }
 
 @media (max-width: 767px) {
-    /* Smartphones */
     header {
-        position: relative;
+        padding: 15px 0;
     }
     
     header .container {
-        padding: 15px;
-        position: relative;
+        padding: 0 20px;
     }
     
     .logo {
-        margin-bottom: 0;
+        z-index: 1010;
     }
     
-    /* Mostrar o botão de menu hambúrguer em mobile */
     .menu-toggle {
         display: block;
-        position: relative;
-        z-index: 1020;
     }
     
-    /* Estilo do menu de navegação em mobile (escondido por padrão) */
     .nav-menu {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 70%;
-        max-width: 300px;
+        width: 80%;
+        max-width: 400px;
         height: 100vh;
-        background-color: #fff;
+        background-color: #1e3346;
         z-index: 1000;
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
         transition: right 0.3s ease;
-        padding-top: 70px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        padding: 100px 40px 40px;
         overflow-y: auto;
     }
     
-    /* Menu de navegação ativo */
     .nav-menu.active {
         right: 0;
     }
     
     .nav-menu ul {
         flex-direction: column;
-        text-align: left;
-        padding: 0 20px;
-        margin: 0;
+        width: 100%;
     }
     
     .nav-menu ul li {
         margin: 0;
-        padding: 12px 0;
-        border-bottom: 1px solid #f0f0f0;
         width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
     }
     
     .nav-menu ul li:last-child {
-        border-bottom: none;
+        margin-top: 20px;
     }
     
     .nav-menu ul li a {
         display: block;
-        font-size: 16px;
-        padding: 0;
+        padding: 10px 0;
+        width: 100%;
+        font-size: 1.2rem;
     }
     
-    /* Overlay para quando o menu estiver aberto */
     body:before {
         content: '';
         position: fixed;
@@ -822,29 +691,25 @@ footer {
     }
     
     .hero {
-        height: auto;
-        min-height: 60vh;
-        margin-top: 0;
-        padding: 80px 0;
+        height: 70vh;
+        background-attachment: scroll;
     }
     
     .hero-content {
-        padding: 0 15px;
+        padding: 0 20px;
     }
     
     .hero-content h2 {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
     
     .hero-content p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     
     .btn {
         padding: 10px 20px;
-        font-size: 0.9rem;
-        width: 100%;
-        max-width: 250px;
+        font-size: 1rem;
     }
     
     section {
@@ -852,39 +717,40 @@ footer {
     }
     
     section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
+        font-size: 2rem;
+        margin-bottom: 40px;
     }
     
     section h2:after {
         width: 60px;
         height: 3px;
-        bottom: -10px;
+        bottom: -12px;
     }
     
     .sobre-content {
-        gap: 30px;
+        flex-direction: column;
     }
     
     .sobre-texto h3 {
+        font-size: 1.3rem;
         margin-top: 20px;
-        font-size: 1.4rem;
     }
     
     .produtos-grid,
     .diferenciais-grid,
-    .representantes-grid {
+    .representantes-grid,
+    .contato-container {
         grid-template-columns: 1fr;
         gap: 20px;
     }
     
     .produto h3 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         padding: 15px 15px 5px;
     }
     
     .produto p {
-        padding: 0 15px 15px;
+        padding: 0 15px 20px;
     }
     
     .produto img {
@@ -892,33 +758,27 @@ footer {
     }
     
     .diferencial {
-        padding: 20px;
-    }
-    
-    .diferencial-icon {
-        font-size: 2rem;
+        padding: 15px 20px;
     }
     
     .diferencial h3 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
     
     .compromisso-content {
-        gap: 30px;
+        flex-direction: column;
     }
     
     .depoimento {
-        flex: 0 0 100%;
-        min-width: 250px;
-    }
-    
-    .depoimento-conteudo {
         padding: 20px;
     }
     
-    .depoimento-autor img {
-        width: 50px;
-        height: 50px;
+    .depoimento p {
+        font-size: 0.95rem;
+    }
+    
+    .depoimento p.autor {
+        font-size: 0.9rem;
     }
     
     .regiao {
@@ -927,11 +787,11 @@ footer {
     
     .representante {
         flex-direction: column;
-        text-align: center;
     }
     
     .representante img {
-        margin: 0 auto 15px;
+        width: 120px;
+        margin: 0 auto 20px;
     }
     
     .representante-info {
@@ -943,54 +803,49 @@ footer {
     }
     
     .form-group {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
     
     .footer-logo,
     .footer-links,
     .footer-contact {
-        flex: 0 0 100%;
-        margin-bottom: 25px;
-        text-align: center;
+        margin-bottom: 30px;
     }
     
     .footer-links ul {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 }
 
-/* Ajustes extras para telas muito pequenas */
 @media (max-width: 480px) {
     .hero-content h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     
     .hero {
-        padding: 60px 0;
+        height: 60vh;
     }
     
     .btn {
-        max-width: 200px;
-        font-size: 0.85rem;
-        padding: 8px 16px;
+        padding: 8px 18px;
+        font-size: 0.9rem;
     }
     
     section h2 {
-        font-size: 1.5rem;
-    }
-    
-    .diferencial-icon {
         font-size: 1.8rem;
     }
     
-    .produto h3, 
-    .diferencial h3,
-    .regiao h3 {
-        font-size: 1.2rem;
+    .diferencial-icon {
+        font-size: 2rem;
     }
     
+    .produto h3, 
+    .diferencial h3, 
+    .regiao h3, 
+    .depoimento-autor h4,
     .sobre-texto h3 {
         font-size: 1.2rem;
     }
